@@ -1,123 +1,55 @@
-OSX Settings, Applications and Configurations 
-=============================================
-Menu and Checklist installs are WIP. 
+# Script d'installation et de configuration d'un Mac
 
-The install.sh script *can* install the following:
+Ce script me permet d'installer les logiciels que j'utilise et de configurer quelques paramètres automatiquement après l'installation de macOS. 
 
- - Moom - http://manytricks.com/moom/
- - TextMate - http://macromates.com/download (no longer default)
- - Adobe Creative Cloud - http://www.adobe.com/appsmanager/
- - Alfred - http://www.alfredapp.com
- - iStat Menus - http://bjango.com/mac/istatmenus/
- - LastPass - https://lastpass.com/
- - LogMeIn Client - https://secure.logmein.com/
- - Wacom Drivers - http://www.wacom.com/en/ca/
- - Kindle - https://itunes.apple.com/ca/app/kindle/id405399194?mt=12
- - Slack - https://stemcell.slack.com/apps
- - Adobe Flash - http://get.adobe.com/flashplayer/
- - Microsoft SilverLight - http://www.microsoft.com/silverlight/
- - DiskInventoryX - http://www.derlien.com/
- - SourceTree - https://itunes.apple.com/ca/app/sourcetree-git-hg/id411678673?mt=12
- - _Adium - https://adium.im/_ REMOVED
- - Nik Software Collection - https://www.google.com/nikcollection/ 
- - Backblaze - https://www.backblaze.com/
- - Balsamiq Mockups - http://balsamiq.com/download/
- - BeyondCompare - http://www.scootersoftware.com/download.php
- - Carbon Copy Cloner - https://bombich.com/download
- - RoyalTS - http://www.royalts.com/main/home/osx.aspx
- - GitHub Desktop - https://mac.github.com/
- - Google AppEngine Launcher
- - iTerm (with solarize theme)
- - JDownloader - http://jdownloader.org:8080/download/index
- - Spotify - https://www.spotify.com/ca-en/download/mac/
- - Atom - https://atom.io/download/mac
- - Sublime Text - http://www.sublimetext.com/2 (no longer default)
- - Bee - https://itunes.apple.com/ca/app/bee-issue-tracking-made-native/id726099620?mt=12
- - KeePassX - http://www.keepassx.org/
- - The Unarchiver - http://wakaba.c3.cx/s/apps/unarchiver
- - Toad - http://www.toadworld.com/products/toad-mac-edition/default.aspx
- - UNetBootin - http://unetbootin.sourceforge.net/
- - RescueTime - https://www.rescuetime.com/
- - VMware Fusion - http://www.vmware.com/products/fusion
- - Oracle VirtualBox - https://www.virtualbox.org/
- - Navicat Essentials for PostgreSQL - http://www.navicat.com/download/navicat-essentials
-  
-Commandline Apps
-================
+**⚠️ Ce script a été conçu pour mes besoins. Avant de l'utiliser pensez bien [à le modifier](https://github.com/nicolinuxfr/macOS-post-installation#comment-lutiliser) en fonction de vos besoins ! ⚠️**
 
- - [AWS CLI](http://aws.amazon.com/cli/)
- - [Docker Toolbox](https://www.docker.com/toolbox)
- - [Vagrant (now part of the Otto install below)](https://www.vagrantup.com/downloads.html) 
- - [Homebrew](http://brew.sh) 
- - [Oh My ZSH!](http://ohmyz.sh) 
- - [OSX Developer Tools](https://developer.apple.com/downloads/index.action) 
- - [Github](http://git-scm.com/download/mac)
- - [Chef DK](https://downloads.getchef.com/chef-dk/mac/)
- - [caskroom](http://caskroom.io) (the real magic here)
- - [Hashicorp's Otto](https://ottoproject.io/)
-  
-Settings Changed
-================
- - Keyboard Repeat Rate High
- - Animations turned off
- - Turned off fast user switching
- - Set default shell to zsh
- - Natural mouse scroll turned off
- - Right click on trackpad
- - Default Shell set to zsh
- - Terminal.app set to Homebrew theme
- - Hostname set everywhere
- - Ability to press and hold keyboard keys turned back on
- - Screensaver password prompt now pops up immediately
- - Application run prompts disabled (commented out for security)
- - Printer app now quits after print jobs
- - Display battery percentage instead of time remaining
- - Allow tab wherever possible
- - Re-enabled zoom-scrolling (hold ctrl)
- - Disabled auto-correct
- - Force-enabled HiDPI display modes
- - Set default finder view to "details"
- - Grouped Expose apps once more
- - Expose and Mission Control animations sped up
- - Animations that can be turned off have been disabled
- - Dashboard disabled
- - Enabled display of volume icons on the desktop again
- - Turned off smart-quotes (interferes with code snippets)
- - Set default sorting of Activity Monitor to CPU usage
- - Set system to restart on freeze/hang
- - Unhide the ~/Library folder
- - Set Safari homepage to blank
- - Set keyboard repeat delay to the lowest value 
- - Turn off iTunes device backup prompts
- - Expand save panel by default
- - Set Finder default to $HOME
- - Set screen capture location to desktop PNGs
- - Turn off Fast User Switching
- - Turn off ambient light sensor
- - Disable send and receive animations in Mail.app
- - Mail.app copied email addresses set to plain "foo@bar.com"
- - ⌘ + enter sends email in Mail.app
- - Removed Mail.app from dock
- - Removed Maps.app from dock
- - Removed iTunes from dock
- - Removed Facetime.app from dock
- - Removed iBooks from dock
+## Présentation
 
-WORK ON THESE (NOT AUTOMATIC)
-=============================
+Ce script exploite exclusivement des lignes de commande Shell et il n'a ainsi aucune dépendance. Quelques pré-requis toutefois : 
 
-Tweaks
- - Turned off clock in menubar (use iStat)
- - Background generated here: http://matthew.wagerfield.com/flat-surface-shader/
+- Il faut être administrateur du Mac pour l'utiliser ;
+- pour installer des apps Mac App Store, il faut posséder un compte et saisir ses identifiants au début ;
+- les apps à installer depuis la boutique d'Apple doivent déjà être associées à votre compte iTunes Store.
 
-Applications:
- - Corel Painter 2015 - 
- - XCode - 
- - Capture One - 
- - VSCO presets - 
- - Adblock Plus for Safari - https://adblockplus.org/category/adblock-plus-safari/
- - Pages - 
- - Amazon Workspaces Client - https://clients.amazonworkspaces.com/
- - Apple Jack - http://sourceforge.net/projects/applejack/
- - Feedly - https://itunes.apple.com/ca/app/feedly.-read-more-know-more./id865500966?mt=12
- - Pomodoro - I've been using http://tomato.es/, though there's a great Pomodoro timer in the app store: https://itunes.apple.com/ca/app/pomodoro-timer-focus-on-your/id872515009?mt=12
+
+Le script exploite [Homebrew](http://brew.sh "Homebrew — The missing package manager for macOS"), [Cask](https://caskroom.github.io) et [mas](https://github.com/mas-cli/mas) pour installer les apps, [mackup](https://github.com/lra/mackup) pour restaurer des préférences depuis un autre Mac. Plus de nombreuses idées piochées [à droite et à gauche](https://github.com/nicolinuxfr/macOS-post-installation#inspirations).
+
+*Testé avec macOS Sierra et OS X El Capitan.*
+
+## Comment l'utiliser ?
+
+Voici comment utiliser les deux scripts : 
+
+- Téléchargez la dernière version du projet ([lien direct](https://github.com/nicolinuxfr/macOS-post-installation/archive/master.zip)) ;
+- ouvrez le fichier `post-install.sh` et modifiez ce qui est installé par défaut : 
+	- chaque ligne qui commence par `install` correspond à une app du Mac App Store et vous devez l'avoir achetée au préalable sur votre compte ;
+	- chaque ligne qui commence par `brew install` installe des utilitaires en ligne de commande ;
+	- chaque ligne qui commence par `brew cask install` installe des applications hors du Mac App Store ;
+- pensez à changer la [ligne 56](https://github.com/nicolinuxfr/macOS-post-installation/blob/master/post-install.sh#L56) en fonction du service de Cloud utilisé, ou alors à la supprimer si vous ne voulez pas en utilisez un ;
+- à partir de la [ligne 113](https://github.com/nicolinuxfr/macOS-post-installation/blob/master/post-install.sh#L113), le script configure quelques réglages par défaut, à modifier selon vos besoins ;
+- **important** : ouvrez le Mac App Store et déconnectez-vous si vous étiez connecté (c'est important pour que mas fonctionne correctement) ;
+- ouvrez ensuite le Terminal de macOS, glissez le fichier `post-install.sh` appuyez sur la touche entrée et accrochez votre ceinture ;
+- le script fonctionnera largement sans votre intervention, sauf :
+	- pour valider l'installation de Homebrew ;
+	- pour saisir le mot de passe administrateur pour Homebrew ;
+	- pour récupérer les identifiants du compte iTunes Store à utiliser pour le Mac App Store ;
+	- pour le mot de passe administrateur nécessaire pour Cask ;
+	- pour certains logiciels qui nécessitent un accès admin ;
+- si tout va bien, il se terminera normalement sans erreur, mais en cas d'erreur, vous pourrez relancer le script et seul ce qui n'a pas déjà été installé, sera installé ;
+- quand le premier script est terminé, et quand vos données sont synchronisées depuis le cloud, ouvrez le fichier `post-cloud.sh` :
+	- [ligne 10](https://github.com/nicolinuxfr/macOS-post-installation/blob/master/post-cloud.sh#L10), modifiez cette ligne en fonction du service de Cloud choisi, ou supprimez-la si vous utilisez Dropbox (choix par défaut) ;
+- toujours dans le Terminal, glissez le fichier `post-cloud.sh` avant de valider avec la touche entrée pour finir l'installation.
+
+
+## Inspirations
+
+Voici quelques scripts qui m'ont servi de base pour créer le mien. Vous y trouverez peut-être des idées pour adapter les scripts en fonction de vos besoins.
+
+- Idée originale : https://jeremy.hu/homebrew-cask-automate-mac-install/
+- https://github.com/ryanmaclean/OSX-Post-Install-Script/
+- https://github.com/snwh/osx-post-install
+- https://github.com/bdougherty/dotfiles/blob/master/osx.sh
+- https://github.com/joeyhoer/starter
+
+Si vous cherchez à modifier les paramètres par défaut de macOS, la source d'information la plus complète, et de loin, est le [starter de joeyhoer](https://github.com/joeyhoer/starter). Vous y trouverez des dizaines et des dizaines de réglages, à vous de piocher dedans pour les adapter au mieux. 
