@@ -16,7 +16,7 @@ brew update
 ## Utilitaires pour les autres apps : Cask et mas (Mac App Store)
 echo 'Installation de mas, pour installer les apps du Mac App Store.'
 brew install mas
-echo "Saisir le mail du compte iTunes :" 
+echo "Saisir le mail du compte iTunes :"
 read COMPTE
 echo "Saisir le mot de passe du compte : $COMPTE"
 read PASSWORD
@@ -81,7 +81,7 @@ mv Package\ Control.sublime-package ~/Library/Application\ Support/Sublime\ Text
 
 echo 'Installation des apps : développement.'
 brew install hugo
-brew cask install hyper textmate atom
+brew cask install atom
 install "Xcode"
 install "docker"
 
@@ -97,13 +97,22 @@ brew cask install silverlight flash-player --appdir=/Applications
 #brew cask install imageoptim sketch qlimagesize
 
 echo 'Installation des apps : loisir.'
-brew cask install vlc keepassx the-unarchiver spotify --appdir=/Applications
+brew cask install vlc the-unarchiver spotify --appdir=/Applications
 brew install mpv --with-bundle
 brew linkapps mpv # Pour avoir un .app dans le dossier des Applications
 
 # DockArt (installation manuelle, faute de mieux)
 cd /tmp/ && curl -O http://www.splook.com/Software/DockArt_files/DockArt2.zip && unzip DockArt2.zip && cd DockArt\ 2.2 && mv DockArt.bundle ~/Library/iTunes/iTunes\ Plug-ins
 
+
+## Install de tesseract & quelques Library
+brew install htop
+brew install leptonica --with-libtiff
+brew install imagemagick
+brew install tesseract --with-all-languages
+brew tap homebrew/science
+brew install boost
+brew install opencv
 
 ## ************************* CONFIGURATION ********************************
 echo "Configuration de quelques paramètres par défaut…"
@@ -255,7 +264,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 # TextEdit : .txt par défaut
 defaults write com.apple.TextEdit RichText -int 0
 
-# Raccourci pour exporter 
+# Raccourci pour exporter
 sudo defaults write -g NSUserKeyEquivalents '{"Export…"="@$e";"Exporter…"="@$e";}'
 
 # Configuration de git
@@ -283,11 +292,11 @@ done
 echo "Installing mac CLI ..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/guarinogabriel/mac-cli/master/mac-cli/tools/install)"
 
-
 ## ************ Fin de l'installation *********
 echo "Finder et Dock relancés… redémarrage nécessaire pour terminer."
 killall Dock
 killall Finder
+
 
 echo "Derniers nettoyages…"
 brew cleanup
