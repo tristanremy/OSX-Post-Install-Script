@@ -40,9 +40,9 @@ brew tap caskroom/cask
 
 ## Installations des logiciels
 echo 'Installation des outils en ligne de commande.'
-brew install wget cmake coreutils psutils git ffmpeg libssh zsh vim git-extras java
+brew install wget cmake coreutils psutils git ffmpeg libssh zsh vim git-extras java sshfs boost opencv htop
 brew tap zyedidia/micro
-brew install micro
+brew install micro bower xmlstarlet
 gem install sass
 
 # Installer oh My zsh & met ZSH par default
@@ -52,7 +52,8 @@ git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugi
 
 
 echo 'Installation des apps : utilitaires.'
-brew cask install google-drive hosts dropbox plex-media-server slack hyperdock sublime-text
+brew tap homebrew/science
+brew cask install google-drive hosts dropbox plex-media-server slack hyperdock sublime-text osxfuse java
 install "FastScripts"
 install "MacTracker"
 
