@@ -15,9 +15,9 @@ echo "Installation de nvm"
 # Installation de nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 
-echo "Installation de nodev6"
+echo "Installation de nodev8"
 # Installation de node
-nvm install 6
+nvm install 8
 
 echo "Installation de mackup et restauration des préférences."
 brew install mackup

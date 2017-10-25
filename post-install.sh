@@ -53,7 +53,7 @@ git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugi
 
 echo 'Installation des apps : utilitaires.'
 brew tap homebrew/science
-brew cask install google-drive hosts dropbox plex-media-server slack hyperdock sublime-text osxfuse java
+brew cask install google-drive  dropbox  slack hyperdock sublime-text osxfuse java webstorm clion
 install "FastScripts"
 install "MacTracker"
 
@@ -81,16 +81,12 @@ wget https://sublime.wbond.net/Package%20Control.sublime-package
 mv Package\ Control.sublime-package ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
 
 echo 'Installation des apps : développement.'
-brew install hugo
-brew cask install atom
-install "Xcode"
-install "docker"
+brew cask install install "docker"
 
 
 echo 'Installation des apps : communication.'
-install "Twitter"
 brew cask install google-chrome firefox
-brew cask install chromecast chrome-remote-desktop-host --appdir=/Applications && defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+brew cask install chromecast --appdir=/Applications && defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 brew cask install silverlight flash-player --appdir=/Applications
 
 
@@ -99,8 +95,6 @@ brew cask install silverlight flash-player --appdir=/Applications
 
 echo 'Installation des apps : loisir.'
 brew cask install vlc the-unarchiver spotify --appdir=/Applications
-brew install mpv --with-bundle
-brew linkapps mpv # Pour avoir un .app dans le dossier des Applications
 
 # DockArt (installation manuelle, faute de mieux)
 cd /tmp/ && curl -O http://www.splook.com/Software/DockArt_files/DockArt2.zip && unzip DockArt2.zip && cd DockArt\ 2.2 && mv DockArt.bundle ~/Library/iTunes/iTunes\ Plug-ins
