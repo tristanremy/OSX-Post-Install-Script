@@ -40,7 +40,7 @@ brew tap caskroom/cask
 
 ## Installations des logiciels
 echo 'Installation des outils en ligne de commande.'
-brew install git ffmpeg libssh sshfs opencv htop noe python3 yarn
+brew install git ffmpeg libssh sshfs opencv htop node nvm python3 yarn
 
 # Installer oh My zsh & met ZSH par default
 brew install fish
